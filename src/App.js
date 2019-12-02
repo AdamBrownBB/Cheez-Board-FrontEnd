@@ -28,6 +28,23 @@ class App extends Component {
       milk: newMilk
     })
   }
+
+  renderCheeses = () => {
+    let filteredByFlavor;
+    console.log(cheeses)
+
+    // switch (this.state.flavor) {
+    //   case "mild":
+    //     filteredByFlavor = cheeses.filter((cheese) => {
+    //       return cheese.flavor === mild
+    //     })
+    //     break;
+    
+    //   default:
+    //     break;
+    // }
+  }
+
  
   render() {
     return (
@@ -36,7 +53,7 @@ class App extends Component {
                   changeTexture={this.changeTexture}
                   changeMilk={this.changeMilk}
                   />
-        < MainBody />
+        < MainBody renderCheeses={this.renderCheeses()}/>
       
       </div>
     )

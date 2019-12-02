@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import CheeseIndex from './CheeseIndex';
 
-import { Route, Switch, Redirect } from 'react-router-dom'
+// import { Route, Switch, Redirect } from 'react-router-dom'
 
 class MainBody extends Component {
 
@@ -32,7 +32,8 @@ class MainBody extends Component {
         return (
             <div>
                 <CheeseIndex renderIndex={this.renderIndex}
-                                cheeses={this.state.cheeses}/>
+                                cheeses={this.state.cheeses}
+                                renderCheeses={this.props.renderCheeses}/>
             </div>
         );
     }
