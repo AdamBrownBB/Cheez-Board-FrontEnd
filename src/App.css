@@ -20,3 +20,26 @@
 .App-link {
   color: #09d3ac;
 }
+
+.navbar {
+  height: 5vw;
+  display: flex;
+  align-items: center;
+  align-self: center;
+}
+
+.Cheese-index {
+  display: flex;
+  justify-content: center;
+}
+
+
+.image-cont {
+
+  width: 15vw;
+  padding: 10px;
+  margin: 10px;
+}
+.image {
+  width: 200px;
+}
