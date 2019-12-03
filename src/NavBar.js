@@ -1,47 +1,28 @@
 import React, { Component } from 'react';
-// import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 
 
 class NavBar extends Component {
 
-    flavorFilter = (e) => {
-      this.props.changeFlavor(e.target.value)
-    }
-    
-    textureFilter = (e) => {
-      this.props.changeTexture(e.target.value)
-    }
-    
-    milkFilter = (e) => {
-      this.props.changeMilk(e.target.value)
-    }
+
 
 
     render() {
         return (
             <div className="navbar">
-                <h3>Flavor: </h3>
-                    <select onChange={this.flavorFilter}>
-                        <option value="all">All</option>
-                        <option value="mild">Mild</option>
-                        <option value="medium">Medium</option>
-                        <option value="bleu">Bleu</option>
-                    </select>
-                <h3>Texture: </h3>
-                    <select onChange={this.textureFilter}>
-                        <option value="all">All</option>
-                        <option value="soft">Soft</option>
-                        <option value="semi-soft">Semi-soft</option>
-                        <option value="hard">Hard</option>
-                    </select>
-                <h3>Milk: </h3>
-                    <select onChange={this.milkFilter}>
-                        <option value="all">All</option>
-                        <option value="cow">Cow</option>
-                        <option value="sheep">Sheep</option>
-                        <option value="goat">Goat</option>
-                    </select>
+               {/* <Link className="logo" to="/">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTklgvQva7a_z1HHnyhf1nhF9M21LfQhJSZ0D3E8aGnTjvUdE4D4A&s" alt='logo'/>   
+                </Link>  */}
+               <h1>Cheez Board</h1>
+
+               <Link to="/cheeses" >
+                 <button>All of the Cheez</button> 
+               </Link>
+                <Link to="/boards" >
+                 <button>Cheez Boards</button> 
+                </Link>
+
                 
             </div>
         );

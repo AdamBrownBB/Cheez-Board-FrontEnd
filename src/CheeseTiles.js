@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import CheeseCard from './CheeseCard';
 
-class CheeseIndex extends Component {
+class CheeseTiles extends Component {
 
-    renderCheeses() {
+    renderCheeseTiles() {
+        // console.log(this.props)
+
         return this.props.cheeses.map(cheese => {
             return <CheeseCard
                 key={cheese.id}
@@ -14,8 +16,8 @@ class CheeseIndex extends Component {
 
     render() {
         return (
-            <div className="Cheese-index">
-                {this.renderCheeses()}
+            <div className="Cheese-Tiles">
+                {this.renderCheeseTiles()}
             </div>
         )
     }
@@ -24,4 +26,4 @@ class CheeseIndex extends Component {
 
 
 
-export default CheeseIndex;
+export default CheeseTiles;
