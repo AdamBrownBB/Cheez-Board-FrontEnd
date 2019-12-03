@@ -31,20 +31,15 @@ class MainBody extends Component {
         return < Boards cheeses={this.state.cheeses} />
     }
     
+
+
     render() {
 
         return (
             <div>
-        
-
-
-                
-                
                 <Switch>
                     <Route path="/cheeses" render={this.renderCheeseContainer}  />
                     <Route path="/boards" render={this.renderBoards}  />
-                    <Route path="/" render={this.renderBoards}  />
-                    
                 </Switch>
             </div>
         );
