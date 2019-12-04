@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import CheeseCard from './CheeseCard';
+import Mild from './Mild';
 
 
 export class NewBoard extends Component {
@@ -7,18 +7,19 @@ export class NewBoard extends Component {
     clickHandler = (e) => {
       this.props.changeFlavor(e.target.value)
     }
+
+
+
  
-
-
-
     render() {
         return (
 
          
             <div id="top_div">
-               <div className="cheese-area" >
-                    <button onClick={this.clickHandler} value="mild">Add Mild Cheese</button>
-                </div> 
+                <Mild clickHandler={this.clickHandler}
+                    mildCheese={this.props.mildCheese}/>
+
+                    
                 <div className="cheese-area" >
                     <button onClick={this.clickHandler} value="medium">Add Medium Cheese</button>
                 </div>   

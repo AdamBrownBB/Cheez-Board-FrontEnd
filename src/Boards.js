@@ -6,7 +6,8 @@ class Boards extends Component {
 
     state = {
         flavor: "all",
-        selectedCheese: []
+        mildCheese: [],
+        mediumCheese: [],
     }
 
     // add Click Handler to Tiles to add cheese tile to Board
@@ -19,7 +20,6 @@ class Boards extends Component {
 
         let filteredByFlavor;
     
-
         switch (this.state.flavor) {
             case "all":
                 filteredByFlavor = this.props.cheeses
@@ -55,24 +55,23 @@ class Boards extends Component {
         })
     }
 
-    addCheese = () => {
-      
-    }
-
     addCheese = (cheese) => {
 
-        console.log(cheese.flavor)
-        // if (!this.state.selectedCheese.find(c => c.id === cheese.id)) {
-        //     this.setState({ selectedCheese: [...this.state.selectedCheese, cheese] })
-        // }
+        if (!this.state.mildCheese.find(c => c.id === cheese.id) &&
+            !this.state.mildCheese.find(c => c.flavor === cheese.flavor)) {
+            this.setState({ mildCheese: [...this.state.mildCheese, cheese] })
+        } 
     }
+
+
     
     render() {
         return (
             <div>
                 <h2>Boards</h2>
                 <NewBoard changeFlavor={this.changeFlavor}
-                            hasCheese={this.state.selectedCheese}/>
+                            mildCheese={this.state.mildCheese}
+                            mediumCheese={this.state.mediumCheese} />     
                 <CheeseTiles cheeses={this.renderCheeses()}
                                clickHandler={this.addCheese} />
             </div>
