@@ -24,6 +24,7 @@ class Filters extends Component {
                     <option value="all">All</option>
                     <option value="mild">Mild</option>
                     <option value="medium">Medium</option>
+                    <option value="bold">Bold</option>
                     <option value="bleu">Bleu</option>
                 </select>
                 <h3>Texture: </h3>

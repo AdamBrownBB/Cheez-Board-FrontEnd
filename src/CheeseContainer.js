@@ -30,6 +30,11 @@ class CheeseContainer extends Component {
                     return cheese.flavor === "medium"
                 })
                 break;
+            case "bold":
+                filteredByFlavor = this.props.cheeses.filter((cheese) => {
+                    return cheese.flavor === "bold"
+                })
+                break;
             case "bleu":
                 filteredByFlavor = this.props.cheeses.filter((cheese) => {
                     return cheese.flavor === "bleu"

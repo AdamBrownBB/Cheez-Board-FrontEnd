@@ -53,3 +53,22 @@
   width: 10%;
   
 }
+
+#container {
+min-height:100%;
+}
+
+#top_div {
+height:50%;
+width:100%;
+margin:auto;
+text-align:center;
+}
+
+#bottom_div {
+height:50%;
+width:100%;
+margin:auto;
+text-align:center;
+
+}

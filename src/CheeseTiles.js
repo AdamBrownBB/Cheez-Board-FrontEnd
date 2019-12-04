@@ -16,7 +16,7 @@ class CheeseTiles extends Component {
 
     render() {
         return (
-            <div className="Cheese-Tiles">
+            <div className="Cheese-Tiles" id="bottom_div">
                 {this.renderCheeseTiles()}
             </div>
         )

@@ -1,11 +1,19 @@
 import React, { Component } from 'react';
 import CheeseTiles from './CheeseTiles';
+import NewBoard from './NewBoard';
 
 class Boards extends Component {
 
     state = {
         flavor: "all"
     }
+
+    // make buttons on NewBoard to add cheeses
+    // use button output to add cheese tile to Board
+    // Make a save button
+    // Make a clear button to remove all cheeses from board
+
+
 
     renderCheeses = () => {
 
@@ -27,6 +35,11 @@ class Boards extends Component {
                     return cheese.flavor === "medium"
                 })
                 break;
+            case "bold":
+                filteredByFlavor = this.props.cheeses.filter((cheese) => {
+                    return cheese.flavor === "bold"
+                })
+                break;
             case "bleu":
                 filteredByFlavor = this.props.cheeses.filter((cheese) => {
                     return cheese.flavor === "bleu"
@@ -35,14 +48,18 @@ class Boards extends Component {
          }    
          return filteredByFlavor
     }
+
+    changeFlavor = (newFlavor) => {
+        this.setState({
+            flavor: newFlavor
+        })
+    }
     
     render() {
-        console.log(this.props.cheeses)
-
         return (
             <div>
                 <h2>Boards</h2>
-                
+                <NewBoard changeFlavor={this.changeFlavor}/>
                 <CheeseTiles cheeses={this.renderCheeses()}/>
             </div>
         );
