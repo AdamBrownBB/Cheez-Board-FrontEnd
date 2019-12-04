@@ -8,8 +8,8 @@ class Boards extends Component {
         flavor: "all"
     }
 
-    // make buttons on NewBoard to add cheeses
-    // use button output to add cheese tile to Board
+    // add a Bold flavor cheese
+    // add Click Handler to Tiles to add cheese tile to Board
     // Make a save button
     // Make a clear button to remove all cheeses from board
 

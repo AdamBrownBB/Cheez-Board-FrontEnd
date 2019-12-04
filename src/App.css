@@ -63,6 +63,7 @@ height:50%;
 width:100%;
 margin:auto;
 text-align:center;
+columns: 4;
 }
 
 #bottom_div {
@@ -71,4 +72,12 @@ width:100%;
 margin:auto;
 text-align:center;
 
+}
+
+.cheese-area {
+  width: 90%;
+  height: 20vh;
+  padding: 10px;
+  border: 2px solid gray;
+  margin: 0;
 }
