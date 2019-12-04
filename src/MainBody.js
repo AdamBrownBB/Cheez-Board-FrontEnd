@@ -3,11 +3,18 @@ import CheeseContainer from './CheeseContainer';
 import Boards from './Boards';
 
 import { Route, Switch } from 'react-router-dom'
+import NewCheeseForm from './NewCheeseForm';
 
 class MainBody extends Component {
 
     state = {
         cheeses: []
+    }
+
+    addCheese = (newCheese) => {
+        this.setState({
+            cheeses: [...this.state.cheeses, newCheese]
+        })
     }
 
     componentDidMount() {
@@ -21,6 +28,7 @@ class MainBody extends Component {
                 this.setState({
                     cheeses: data
                 }))
+          
     }
 
     renderCheeseContainer = () => {
@@ -29,6 +37,10 @@ class MainBody extends Component {
 
     renderBoards = () => {
         return < Boards cheeses={this.state.cheeses} />
+    }
+
+    renderNew = () => {
+        return < NewCheeseForm addCheese={this.addCheese}/>
     }
     
 
@@ -40,6 +52,7 @@ class MainBody extends Component {
                 <Switch>
                     <Route path="/cheeses" render={this.renderCheeseContainer}  />
                     <Route path="/boards" render={this.renderBoards}  />
+                    <Route path="/new" render={this.renderNew} />
                 </Switch>
             </div>
         );

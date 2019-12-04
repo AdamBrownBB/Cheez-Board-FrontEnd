@@ -22,6 +22,9 @@ class NavBar extends Component {
                 <Link to="/boards" >
                  <button>Cheez Boards</button> 
                 </Link>
+                <Link to="/new">
+                    <button>Make a new Cheese</button>
+                </Link>
 
                 
             </div>

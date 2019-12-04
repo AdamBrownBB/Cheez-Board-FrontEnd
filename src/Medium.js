@@ -2,11 +2,11 @@ import React, { Component } from 'react';
 import CheeseCard from './CheeseCard';
 
 
-class Mild extends Component {
+class Medium extends Component {
 
 
     renderCheeseCard() {
-        return this.props.cheese.map(cheese => {
+        return this.props.mediumCheese.map(cheese => {
             return <CheeseCard key={cheese.id}
                 clickHandler={this.props.clickHandler}
                 cheese={cheese}
@@ -18,11 +18,11 @@ class Mild extends Component {
     render() {
         return (
             <div className="cheese-area" >
-                <button onClick={this.props.clickHandler} value="mild">Add Mild Cheese</button>
+                <button onClick={this.props.clickHandler} value="medium">Add Medium Cheese</button>
                 {this.renderCheeseCard()}
-            </div> 
+            </div>
         );
     }
 }
 
-export default Mild;
+export default Medium;
