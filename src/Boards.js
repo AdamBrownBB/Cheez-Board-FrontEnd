@@ -5,10 +5,10 @@ import NewBoard from './NewBoard';
 class Boards extends Component {
 
     state = {
-        flavor: "all"
+        flavor: "all",
+        selectedCheese: []
     }
 
-    // add a Bold flavor cheese
     // add Click Handler to Tiles to add cheese tile to Board
     // Make a save button
     // Make a clear button to remove all cheeses from board
@@ -54,13 +54,27 @@ class Boards extends Component {
             flavor: newFlavor
         })
     }
+
+    addCheese = () => {
+      
+    }
+
+    addCheese = (cheese) => {
+
+        console.log(cheese.flavor)
+        // if (!this.state.selectedCheese.find(c => c.id === cheese.id)) {
+        //     this.setState({ selectedCheese: [...this.state.selectedCheese, cheese] })
+        // }
+    }
     
     render() {
         return (
             <div>
                 <h2>Boards</h2>
-                <NewBoard changeFlavor={this.changeFlavor}/>
-                <CheeseTiles cheeses={this.renderCheeses()}/>
+                <NewBoard changeFlavor={this.changeFlavor}
+                            hasCheese={this.state.selectedCheese}/>
+                <CheeseTiles cheeses={this.renderCheeses()}
+                               clickHandler={this.addCheese} />
             </div>
         );
     }

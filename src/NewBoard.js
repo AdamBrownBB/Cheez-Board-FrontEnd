@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+// import CheeseCard from './CheeseCard';
+
 
 export class NewBoard extends Component {
 

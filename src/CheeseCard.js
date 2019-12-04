@@ -3,9 +3,9 @@ import React, { Component } from 'react';
 export class CheeseCard extends Component {
     render() {
         return (
-            <div className="image-cont">
-                <img className="image" alt={this.props.name} src={this.props.image} />
-                <h3> {this.props.name} </h3>
+            <div className="cheese-card" onClick={() => {this.props.clickHandler(this.props.cheese)}}>
+                <img id="image" alt={this.props.cheese.name} src={this.props.cheese.image} />
+                 {this.props.cheese.name} 
             </div>
         );
     }

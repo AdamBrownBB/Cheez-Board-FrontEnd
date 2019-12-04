@@ -4,12 +4,12 @@ import CheeseCard from './CheeseCard';
 class CheeseTiles extends Component {
 
     renderCheeseTiles() {
-        // console.log(this.props)
 
         return this.props.cheeses.map(cheese => {
-            return <CheeseCard
-                key={cheese.id}
-                {...cheese}
+            return <CheeseCard  key={cheese.id}
+                             clickHandler={this.props.clickHandler}
+                              cheese={cheese}
+               
             />
         })
     }
