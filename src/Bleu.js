@@ -2,26 +2,28 @@ import React, { Component } from 'react';
 import CheeseCard from './CheeseCard';
 
 
-class Medium extends Component {
+class Bleu extends Component {
+
 
     renderCheeseCard() {
-        if (this.props.mediumCheese) {
-            return <CheeseCard key={this.props.mediumCheese.id}
+        if (this.props.bleuCheese) {
+            return <CheeseCard key={this.props.bleuCheese.id}
                 clickHandler={this.props.clickHandler}
-                cheese={this.props.mediumCheese} />
+                cheese={this.props.bleuCheese} />
         } else {
             return null
         }
     }
 
+
     render() {
         return (
             <div className="cheese-area" >
-                <button onClick={this.props.clickHandler} value="medium">Show Medium Cheeses</button>
+                <button onClick={this.props.clickHandler} value="bleu">Show Bleu Cheeses</button>
                 {this.renderCheeseCard()}
             </div>
         );
     }
 }
 
-export default Medium;
+export default Bleu;

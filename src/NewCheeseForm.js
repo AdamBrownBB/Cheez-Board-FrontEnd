@@ -46,11 +46,12 @@ class NewCheeseForm extends Component {
                         name="texture"
                         onChange={this.handleChange}
                     />
-                    <input
-                        placeholder="Flavor"
-                        name="flavor"
-                        onChange={this.handleChange}
-                    />
+                    <select onChange={this.handleChange}>
+                        <option value="mild">Mild</option>
+                        <option value="medium">Medium</option>
+                        <option value="bold">Bold</option>
+                        <option value="bleu">Bleu</option>
+                    </select>    
                     <input
                         placeholder="Milk"
                         name="milk"

@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Mild from './Mild';
-// import Medium from './Medium';
+import Medium from './Medium';
+import Bold from './Bold';
+import Bleu from './Bleu';
 
 
 export class NewBoard extends Component {
@@ -10,26 +12,19 @@ export class NewBoard extends Component {
     }
 
 
-
- 
     render() {
         return (
 
-         
             <div id="top_div">
                 <Mild clickHandler={this.clickHandler}
-                    cheese={this.props.mildCheese}/>
-          
-                <div className="cheese-area" >
-                    <button onClick={this.clickHandler} value="bold">Add Bold Cheese</button>
-                </div>
+                    mildCheese={this.props.mildCheese}/>
+                <Medium clickHandler={this.clickHandler}
+                    mediumCheese={this.props.mediumCheese} />
+                <Bold clickHandler={this.clickHandler}
+                    boldCheese={this.props.boldCheese} />
+                <Bleu clickHandler={this.clickHandler}
+                    bleuCheese={this.props.bleuCheese} />               
                 
-                <div className="cheese-area" >
-                    <button onClick={this.clickHandler} value="bold">Add Bold Cheese</button>
-                </div>
-                <div className="cheese-area" >
-                    <button onClick={this.clickHandler} value="bleu">Add Bleu Cheese</button>
-                </div>
             </div>
             
        

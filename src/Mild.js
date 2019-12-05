@@ -6,19 +6,20 @@ class Mild extends Component {
 
 
     renderCheeseCard() {
-        return this.props.cheese.map(cheese => {
-            return <CheeseCard key={cheese.id}
+        if (this.props.mildCheese) {
+        return <CheeseCard key={this.props.mildCheese.id}
                 clickHandler={this.props.clickHandler}
-                cheese={cheese}
-            />
-        })
+            cheese={this.props.mildCheese} /> 
+        } else {
+            return null
+        }
     }
 
 
     render() {
         return (
             <div className="cheese-area" >
-                <button onClick={this.props.clickHandler} value="mild">Add Mild Cheese</button>
+                <button onClick={this.props.clickHandler} value="mild">Show Mild Cheeses</button>
                 {this.renderCheeseCard()}
             </div> 
         );
